@@ -14,7 +14,7 @@ struct BreedDTO: Codable {
     let cfaURL: String?
     let vetstreetURL: String?
     let vcahospitalsURL: String?
-    let temperament, origin, countryCodes, countryCode: String?
+    let temperament, origin, countryCodes, countryCode: String
     let description, lifeSpan: String?
     let indoor, lap: Int?
     let altNames: String?
@@ -39,4 +39,25 @@ struct Image: Codable {
 // MARK: - Weight
 struct Weight: Codable {
     let imperial, metric: String?
+}
+
+//MARK: - UIModels
+
+///MainScreen UI model
+struct BreedUI {
+    let origin: String
+    let breed: String
+    let url: URL?
+    
+    init(from dto: BreedDTO) {
+        self.origin = dto.origin
+        self .breed = dto.name
+        
+        if let urlString = dto.image?.url, let url = URL(string: urlString) {
+            self.url = url
+        } else {
+            self.url = nil
+        }
+        
+    }
 }
