@@ -9,7 +9,7 @@ import Foundation
 import os
 
 protocol NetworkServiceProtocol {
-    func fetchBreeds(completion: @escaping (Result<[Breed], NetworkError>) -> ())
+    func fetchBreeds(completion: @escaping (Result<[BreedDTO], NetworkError>) -> ())
     func fetchImages(completion: @escaping (Result<[Image], NetworkError>) -> ())
 }
 
@@ -58,7 +58,7 @@ class NetworkService {
 }
 
 extension NetworkService: NetworkServiceProtocol {
-    func fetchBreeds(completion: @escaping (Result<[Breed], NetworkError>) -> ()) {
+    func fetchBreeds(completion: @escaping (Result<[BreedDTO], NetworkError>) -> ()) {
         fetch(Endpoint.getBreeds, completion)
     }
     
