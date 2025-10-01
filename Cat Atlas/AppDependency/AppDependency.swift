@@ -15,4 +15,17 @@ struct AppDependency {
         presenter.view = view
         return view
     }
+    
+    func makeImageView() -> GalleryViewController {
+        GalleryViewController()
+    }
+    
+    func makeBookmarkView() -> BookmarkViewController {
+        BookmarkViewController()
+        
+    }
+    
+    func makeProfileView() -> ProfileViewController {
+        ProfileViewController()
+    }
 }
