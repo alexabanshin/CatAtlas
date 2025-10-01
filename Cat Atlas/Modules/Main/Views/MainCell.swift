@@ -61,12 +61,12 @@ private extension MainCell {
         contentView.addSubview(imageView)
     }
     
-     func setupLabelsStack() {
-        originLabel.font = UIFont.systemFont(ofSize: 14)
-        originLabel.textColor = .gray
-        breedLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        breedLabel.textColor = .black
-        
+    func setupLabelsStack() {
+        breedLabel.font = UIFont(name: "ComicNeue-BoldItalic", size: 18)
+        breedLabel.textColor = .systemBrown
+        originLabel.font = UIFont(name: "ComicNeue-Light", size: 14)
+        originLabel.textColor = .darkGray
+    
         labelsStack.axis = .vertical
         labelsStack.spacing = 4
         labelsStack.alignment = .leading
@@ -79,7 +79,7 @@ private extension MainCell {
     func setupBookmarkButton() {
         bookmarkButton.translatesAutoresizingMaskIntoConstraints = false
         
-        bookmarkButton.setImage(UIImage(named: "paw"), for: .normal)
+        bookmarkButton.setImage(UIImage(named: "bookmark"), for: .normal)
         bookmarkButton.setImage(UIImage(named: "paw2"), for: .selected)
         
         bookmarkButton.backgroundColor = .white.withAlphaComponent(0.9)
