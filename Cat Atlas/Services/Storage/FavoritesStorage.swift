@@ -51,3 +51,16 @@ final class FavoritesStorage {
     }
 }
 
+extension FavoritesStorage {
+    func add(_ breedUI: BreedUI) {
+        // проверяем, что нет дубликата
+        if fetch().contains(where: { $0.id == breedUI.id }) { return }
+
+        let favorite = FavoriteBreed(context: context)
+        favorite.id = breedUI.id
+        favorite.name = breedUI.breed
+        favorite.origin = breedUI.origin
+        favorite.imageURL = breedUI.url?.absoluteString
+        saveContext()
+    }
+}
