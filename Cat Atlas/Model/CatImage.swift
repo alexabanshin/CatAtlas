@@ -32,6 +32,5 @@ struct BreedSummary: Codable {
     let wikipediaURL: String
     let hypoallergenic: Int
     let referenceImageID: String
-
 }
 

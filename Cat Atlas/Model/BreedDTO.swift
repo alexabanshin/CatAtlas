@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct BreedDTO: Codable {
     let weight: Weight
     let id, name: String
@@ -45,11 +44,13 @@ struct Weight: Codable {
 
 ///MainScreen UI model
 struct BreedUI {
+    let id: String
     let origin: String
     let breed: String
     let url: URL?
     
     init(from dto: BreedDTO) {
+        self.id = dto.id
         self.origin = dto.origin
         self .breed = dto.name
         
@@ -58,6 +59,19 @@ struct BreedUI {
         } else {
             self.url = nil
         }
-        
     }
 }
+
+extension BreedUI {
+    init(from favorite: FavoriteBreed) {
+        self.id = favorite.id ?? UUID().uuidString  
+        self.breed = favorite.name ?? "Unknown"
+        self.origin = favorite.origin ?? "Unknown"
+        if let urlString = favorite.imageURL {
+            self.url = URL(string: urlString)
+        } else {
+            self.url = nil
+        }
+    }
+}
+
