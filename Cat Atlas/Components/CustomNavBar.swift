@@ -17,6 +17,7 @@ final class CustomNavBar: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
+//        test
     }
 
     required init?(coder: NSCoder) {
