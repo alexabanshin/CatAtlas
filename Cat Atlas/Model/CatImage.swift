@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CatImage: Codable {
+struct CatImageDTO: Codable {
     let breeds: [BreedSummary]
     let id: String
     let url: String
@@ -32,6 +32,5 @@ struct BreedSummary: Codable {
     let wikipediaURL: String
     let hypoallergenic: Int
     let referenceImageID: String
-
 }
 

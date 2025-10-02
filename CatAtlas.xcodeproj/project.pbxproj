@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6D4B2AD22E8B30A300168BBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2ACA2E8B30A300168BBD /* AppDelegate.swift */; };
 		6D4B2AD32E8B30A300168BBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2ACF2E8B30A300168BBD /* SceneDelegate.swift */; };
-		6D4B2AD42E8B30A300168BBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2AD02E8B30A300168BBD /* ViewController.swift */; };
+		6D4B2AD42E8B30A300168BBD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2AD02E8B30A300168BBD /* MainViewController.swift */; };
 		6D4B2AD52E8B30A300168BBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D4B2ACB2E8B30A300168BBD /* Assets.xcassets */; };
 		6D4B2AD72E8B30A300168BBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D4B2ACE2E8B30A300168BBD /* LaunchScreen.storyboard */; };
 		6D4B2AE72E8B3C6A00168BBD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2AE62E8B3C6A00168BBD /* API.swift */; };
@@ -17,8 +17,33 @@
 		6D4B2AEB2E8B3C8700168BBD /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2AEA2E8B3C8700168BBD /* Endpoint.swift */; };
 		6D4B2AED2E8B3C9300168BBD /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2AEC2E8B3C9300168BBD /* NetworkRouter.swift */; };
 		6D4B2AEF2E8B3CA400168BBD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2AEE2E8B3CA400168BBD /* NetworkService.swift */; };
-		6D4B2B2C2E8B54C300168BBD /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2B2B2E8B54C300168BBD /* Breed.swift */; };
-		6D4B2B2E2E8B570D00168BBD /*  CatImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2B2D2E8B570D00168BBD /*  CatImage.swift */; };
+		6D4B2B2C2E8B54C300168BBD /* BreedDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2B2B2E8B54C300168BBD /* BreedDTO.swift */; };
+		6D4B2B2E2E8B570D00168BBD /* CatImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2B2D2E8B570D00168BBD /* CatImage.swift */; };
+		6D4B2C352E8BAACD00168BBD /* BreedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2C342E8BAACD00168BBD /* BreedCell.swift */; };
+		6D4B2C3C2E8BC37400168BBD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6D4B2C3B2E8BC37400168BBD /* Kingfisher */; };
+		6D4B2C402E8BC46900168BBD /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2C3F2E8BC46900168BBD /* MainViewPresenter.swift */; };
+		6D4B2C422E8BC84F00168BBD /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2C412E8BC84F00168BBD /* AppDependency.swift */; };
+		6D4B2C472E8C876300168BBD /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2C462E8C876300168BBD /* BaseCollectionCell.swift */; };
+		6D4B2C492E8C90B600168BBD /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2C482E8C90B600168BBD /* UIColor + Ext.swift */; };
+		6D4B2C4B2E8CABC900168BBD /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2C4A2E8CABC900168BBD /* CustomNavBar.swift */; };
+		6D4B2C552E8CB3AF00168BBD /* ComicNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D4B2C4F2E8CB3AF00168BBD /* ComicNeue-Bold.ttf */; };
+		6D4B2C562E8CB3AF00168BBD /* ComicNeue-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D4B2C502E8CB3AF00168BBD /* ComicNeue-BoldItalic.ttf */; };
+		6D4B2C572E8CB3AF00168BBD /* ComicNeue-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D4B2C532E8CB3AF00168BBD /* ComicNeue-LightItalic.ttf */; };
+		6D4B2C582E8CB3AF00168BBD /* ComicNeue-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D4B2C512E8CB3AF00168BBD /* ComicNeue-Italic.ttf */; };
+		6D4B2C592E8CB3AF00168BBD /* ComicNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D4B2C542E8CB3AF00168BBD /* ComicNeue-Regular.ttf */; };
+		6D4B2C5A2E8CB3AF00168BBD /* ComicNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D4B2C522E8CB3AF00168BBD /* ComicNeue-Light.ttf */; };
+		6D4B2D622E8CB57500168BBD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2D612E8CB57500168BBD /* TabBarController.swift */; };
+		6D4B2D662E8CBE2600168BBD /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2D652E8CBE2600168BBD /* GalleryViewController.swift */; };
+		6D4B2D682E8CBE3500168BBD /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2D672E8CBE3500168BBD /* BookmarkViewController.swift */; };
+		6D4B2D6A2E8CBE3E00168BBD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2D692E8CBE3E00168BBD /* ProfileViewController.swift */; };
+		6D4B2D6C2E8CBE4600168BBD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2D6B2E8CBE4600168BBD /* DetailViewController.swift */; };
+		6D4B2D6E2E8CC48800168BBD /* UIImage + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2D6D2E8CC48800168BBD /* UIImage + Ext.swift */; };
+		6D4B2D732E8DDBD600168BBD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2D722E8DDBD600168BBD /* BaseViewController.swift */; };
+		6D4B2D762E8DDE1C00168BBD /* CatAtlas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2D742E8DDE1C00168BBD /* CatAtlas.xcdatamodeld */; };
+		6D4B2D782E8DE0ED00168BBD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2D772E8DE0ED00168BBD /* Persistence.swift */; };
+		6D4B2D7A2E8DE12600168BBD /* FavoritesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2D792E8DE12600168BBD /* FavoritesStorage.swift */; };
+		6D4B2D7C2E8DE4FB00168BBD /* BreedsColletctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2D7B2E8DE4FB00168BBD /* BreedsColletctionViewController.swift */; };
+		6D4B2D7E2E8E083A00168BBD /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4B2D7D2E8E083A00168BBD /* CustomNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,14 +53,38 @@
 		6D4B2ACC2E8B30A300168BBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D4B2ACD2E8B30A300168BBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D4B2ACF2E8B30A300168BBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6D4B2AD02E8B30A300168BBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6D4B2AD02E8B30A300168BBD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6D4B2AE62E8B3C6A00168BBD /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		6D4B2AE82E8B3C7600168BBD /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		6D4B2AEA2E8B3C8700168BBD /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		6D4B2AEC2E8B3C9300168BBD /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		6D4B2AEE2E8B3CA400168BBD /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		6D4B2B2B2E8B54C300168BBD /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
-		6D4B2B2D2E8B570D00168BBD /*  CatImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " CatImage.swift"; sourceTree = "<group>"; };
+		6D4B2B2B2E8B54C300168BBD /* BreedDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDTO.swift; sourceTree = "<group>"; };
+		6D4B2B2D2E8B570D00168BBD /* CatImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatImage.swift; sourceTree = "<group>"; };
+		6D4B2C342E8BAACD00168BBD /* BreedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCell.swift; sourceTree = "<group>"; };
+		6D4B2C3F2E8BC46900168BBD /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
+		6D4B2C412E8BC84F00168BBD /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
+		6D4B2C462E8C876300168BBD /* BaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionCell.swift; sourceTree = "<group>"; };
+		6D4B2C482E8C90B600168BBD /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
+		6D4B2C4A2E8CABC900168BBD /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
+		6D4B2C4F2E8CB3AF00168BBD /* ComicNeue-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Bold.ttf"; sourceTree = "<group>"; };
+		6D4B2C502E8CB3AF00168BBD /* ComicNeue-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-BoldItalic.ttf"; sourceTree = "<group>"; };
+		6D4B2C512E8CB3AF00168BBD /* ComicNeue-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Italic.ttf"; sourceTree = "<group>"; };
+		6D4B2C522E8CB3AF00168BBD /* ComicNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Light.ttf"; sourceTree = "<group>"; };
+		6D4B2C532E8CB3AF00168BBD /* ComicNeue-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-LightItalic.ttf"; sourceTree = "<group>"; };
+		6D4B2C542E8CB3AF00168BBD /* ComicNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Regular.ttf"; sourceTree = "<group>"; };
+		6D4B2D612E8CB57500168BBD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		6D4B2D652E8CBE2600168BBD /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		6D4B2D672E8CBE3500168BBD /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		6D4B2D692E8CBE3E00168BBD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6D4B2D6B2E8CBE4600168BBD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		6D4B2D6D2E8CC48800168BBD /* UIImage + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Ext.swift"; sourceTree = "<group>"; };
+		6D4B2D722E8DDBD600168BBD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		6D4B2D752E8DDE1C00168BBD /* CatAtlas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CatAtlas.xcdatamodel; sourceTree = "<group>"; };
+		6D4B2D772E8DE0ED00168BBD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		6D4B2D792E8DE12600168BBD /* FavoritesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStorage.swift; sourceTree = "<group>"; };
+		6D4B2D7B2E8DE4FB00168BBD /* BreedsColletctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsColletctionViewController.swift; sourceTree = "<group>"; };
+		6D4B2D7D2E8E083A00168BBD /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D4B2C3C2E8BC37400168BBD /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,15 +119,19 @@
 			isa = PBXGroup;
 			children = (
 				6D4B2AD82E8B30B100168BBD /* Application */,
+				6D4B2ADD2E8B3B9900168BBD /* Coordinator */,
 				6D4B2ADE2E8B3BA800168BBD /* AppDependency */,
+				6D4B2ADC2E8B3B9100168BBD /* Navigation */,
 				6D4B2AE02E8B3BDB00168BBD /* Services */,
 				6D4B2ADA2E8B3B7B00168BBD /* Model */,
-				6D4B2ADD2E8B3B9900168BBD /* Coordinator */,
-				6D4B2ADC2E8B3B9100168BBD /* Navigation */,
+				6D4B2D6F2E8DDA7B00168BBD /* Components */,
+				6D4B2D602E8CB56200168BBD /* TabBarController */,
 				6D4B2ADB2E8B3B8900168BBD /* Modules */,
 				6D4B2AE12E8B3BEA00168BBD /* Base */,
 				6D4B2ADF2E8B3BD400168BBD /* Helpers */,
+				6D4B2C4E2E8CB1E200168BBD /* Resources */,
 				6D4B2AD92E8B30C400168BBD /* SupportingFiles */,
+				6D4B2D742E8DDE1C00168BBD /* CatAtlas.xcdatamodeld */,
 			);
 			path = "Cat Atlas";
 			sourceTree = "<group>";
@@ -104,8 +158,8 @@
 		6D4B2ADA2E8B3B7B00168BBD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6D4B2B2B2E8B54C300168BBD /* Breed.swift */,
-				6D4B2B2D2E8B570D00168BBD /*  CatImage.swift */,
+				6D4B2B2B2E8B54C300168BBD /* BreedDTO.swift */,
+				6D4B2B2D2E8B570D00168BBD /* CatImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,6 +168,9 @@
 			isa = PBXGroup;
 			children = (
 				6D4B2AE22E8B3C0900168BBD /* Main */,
+				6D4B2C432E8BCF5D00168BBD /* Gallery */,
+				6D4B2C442E8BCF6C00168BBD /* Bookmark */,
+				6D4B2C452E8BCF7F00168BBD /* Profile */,
 				6D4B2AE32E8B3C1000168BBD /* Detail */,
 			);
 			path = Modules;
@@ -136,6 +193,7 @@
 		6D4B2ADE2E8B3BA800168BBD /* AppDependency */ = {
 			isa = PBXGroup;
 			children = (
+				6D4B2C412E8BC84F00168BBD /* AppDependency.swift */,
 			);
 			path = AppDependency;
 			sourceTree = "<group>";
@@ -143,6 +201,7 @@
 		6D4B2ADF2E8B3BD400168BBD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				6D4B2C372E8BC16600168BBD /* Extensions */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -159,6 +218,10 @@
 		6D4B2AE12E8B3BEA00168BBD /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				6D4B2C462E8C876300168BBD /* BaseCollectionCell.swift */,
+				6D4B2D722E8DDBD600168BBD /* BaseViewController.swift */,
+				6D4B2D7B2E8DE4FB00168BBD /* BreedsColletctionViewController.swift */,
+				6D4B2D7D2E8E083A00168BBD /* CustomNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -166,7 +229,8 @@
 		6D4B2AE22E8B3C0900168BBD /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				6D4B2AD02E8B30A300168BBD /* ViewController.swift */,
+				6D4B2C3F2E8BC46900168BBD /* MainViewPresenter.swift */,
+				6D4B2AD02E8B30A300168BBD /* MainViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -174,6 +238,7 @@
 		6D4B2AE32E8B3C1000168BBD /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				6D4B2D6B2E8CBE4600168BBD /* DetailViewController.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -193,8 +258,81 @@
 		6D4B2AE52E8B3C3F00168BBD /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				6D4B2D772E8DE0ED00168BBD /* Persistence.swift */,
+				6D4B2D792E8DE12600168BBD /* FavoritesStorage.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		6D4B2C372E8BC16600168BBD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6D4B2C482E8C90B600168BBD /* UIColor + Ext.swift */,
+				6D4B2D6D2E8CC48800168BBD /* UIImage + Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6D4B2C432E8BCF5D00168BBD /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				6D4B2D652E8CBE2600168BBD /* GalleryViewController.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		6D4B2C442E8BCF6C00168BBD /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				6D4B2D672E8CBE3500168BBD /* BookmarkViewController.swift */,
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
+		6D4B2C452E8BCF7F00168BBD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				6D4B2D692E8CBE3E00168BBD /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		6D4B2C4D2E8CB1D000168BBD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6D4B2C4F2E8CB3AF00168BBD /* ComicNeue-Bold.ttf */,
+				6D4B2C502E8CB3AF00168BBD /* ComicNeue-BoldItalic.ttf */,
+				6D4B2C512E8CB3AF00168BBD /* ComicNeue-Italic.ttf */,
+				6D4B2C522E8CB3AF00168BBD /* ComicNeue-Light.ttf */,
+				6D4B2C532E8CB3AF00168BBD /* ComicNeue-LightItalic.ttf */,
+				6D4B2C542E8CB3AF00168BBD /* ComicNeue-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		6D4B2C4E2E8CB1E200168BBD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6D4B2C4D2E8CB1D000168BBD /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6D4B2D602E8CB56200168BBD /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				6D4B2D612E8CB57500168BBD /* TabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		6D4B2D6F2E8DDA7B00168BBD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6D4B2C342E8BAACD00168BBD /* BreedCell.swift */,
+				6D4B2C4A2E8CABC900168BBD /* CustomNavBar.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +352,7 @@
 			);
 			name = CatAtlas;
 			packageProductDependencies = (
+				6D4B2C3B2E8BC37400168BBD /* Kingfisher */,
 			);
 			productName = "Cat Atlas_UIKit";
 			productReference = 6D4B2AB22E8B2B4600168BBD /* CatAtlas.app */;
@@ -243,6 +382,9 @@
 			);
 			mainGroup = 6D4B2AA92E8B2B4600168BBD;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6D4B2C3A2E8BC37400168BBD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6D4B2AB32E8B2B4600168BBD /* Products */;
 			projectDirPath = "";
@@ -260,6 +402,12 @@
 			files = (
 				6D4B2AD52E8B30A300168BBD /* Assets.xcassets in Resources */,
 				6D4B2AD72E8B30A300168BBD /* LaunchScreen.storyboard in Resources */,
+				6D4B2C552E8CB3AF00168BBD /* ComicNeue-Bold.ttf in Resources */,
+				6D4B2C562E8CB3AF00168BBD /* ComicNeue-BoldItalic.ttf in Resources */,
+				6D4B2C572E8CB3AF00168BBD /* ComicNeue-LightItalic.ttf in Resources */,
+				6D4B2C582E8CB3AF00168BBD /* ComicNeue-Italic.ttf in Resources */,
+				6D4B2C592E8CB3AF00168BBD /* ComicNeue-Regular.ttf in Resources */,
+				6D4B2C5A2E8CB3AF00168BBD /* ComicNeue-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,14 +418,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D4B2B2C2E8B54C300168BBD /* Breed.swift in Sources */,
-				6D4B2B2E2E8B570D00168BBD /*  CatImage.swift in Sources */,
+				6D4B2B2C2E8B54C300168BBD /* BreedDTO.swift in Sources */,
+				6D4B2B2E2E8B570D00168BBD /* CatImage.swift in Sources */,
+				6D4B2D6A2E8CBE3E00168BBD /* ProfileViewController.swift in Sources */,
+				6D4B2D732E8DDBD600168BBD /* BaseViewController.swift in Sources */,
+				6D4B2D6E2E8CC48800168BBD /* UIImage + Ext.swift in Sources */,
+				6D4B2C4B2E8CABC900168BBD /* CustomNavBar.swift in Sources */,
+				6D4B2D682E8CBE3500168BBD /* BookmarkViewController.swift in Sources */,
 				6D4B2AD22E8B30A300168BBD /* AppDelegate.swift in Sources */,
+				6D4B2D6C2E8CBE4600168BBD /* DetailViewController.swift in Sources */,
 				6D4B2AD32E8B30A300168BBD /* SceneDelegate.swift in Sources */,
 				6D4B2AEF2E8B3CA400168BBD /* NetworkService.swift in Sources */,
+				6D4B2D7C2E8DE4FB00168BBD /* BreedsColletctionViewController.swift in Sources */,
+				6D4B2D622E8CB57500168BBD /* TabBarController.swift in Sources */,
+				6D4B2C352E8BAACD00168BBD /* BreedCell.swift in Sources */,
+				6D4B2C472E8C876300168BBD /* BaseCollectionCell.swift in Sources */,
+				6D4B2C492E8C90B600168BBD /* UIColor + Ext.swift in Sources */,
+				6D4B2D662E8CBE2600168BBD /* GalleryViewController.swift in Sources */,
+				6D4B2C422E8BC84F00168BBD /* AppDependency.swift in Sources */,
 				6D4B2AE72E8B3C6A00168BBD /* API.swift in Sources */,
+				6D4B2D762E8DDE1C00168BBD /* CatAtlas.xcdatamodeld in Sources */,
+				6D4B2D7E2E8E083A00168BBD /* CustomNavigationController.swift in Sources */,
+				6D4B2D782E8DE0ED00168BBD /* Persistence.swift in Sources */,
 				6D4B2AEB2E8B3C8700168BBD /* Endpoint.swift in Sources */,
-				6D4B2AD42E8B30A300168BBD /* ViewController.swift in Sources */,
+				6D4B2D7A2E8DE12600168BBD /* FavoritesStorage.swift in Sources */,
+				6D4B2C402E8BC46900168BBD /* MainViewPresenter.swift in Sources */,
+				6D4B2AD42E8B30A300168BBD /* MainViewController.swift in Sources */,
 				6D4B2AE92E8B3C7600168BBD /* NetworkError.swift in Sources */,
 				6D4B2AED2E8B3C9300168BBD /* NetworkRouter.swift in Sources */,
 			);
@@ -304,12 +470,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T6NP5VY79P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Cat Atlas/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,12 +498,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T6NP5VY79P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Cat Atlas/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -490,6 +660,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6D4B2C3A2E8BC37400168BBD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6D4B2C3B2E8BC37400168BBD /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D4B2C3A2E8BC37400168BBD /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		6D4B2D742E8DDE1C00168BBD /* CatAtlas.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6D4B2D752E8DDE1C00168BBD /* CatAtlas.xcdatamodel */,
+			);
+			currentVersion = 6D4B2D752E8DDE1C00168BBD /* CatAtlas.xcdatamodel */;
+			path = CatAtlas.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6D4B2AAA2E8B2B4600168BBD /* Project object */;
 }
