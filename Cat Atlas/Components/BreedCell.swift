@@ -9,12 +9,19 @@
 import UIKit
 import Kingfisher
 
+protocol BreedCellDelegate: AnyObject {
+    func didTapBookmark(for breed: BreedUI, isBookmarked: Bool)
+}
+
 final class BreedCell: BaseCollectionCell {
     private let imageView = UIImageView()
     private let originLabel = UILabel()
     private let breedLabel = UILabel()
     private let labelsStack = UIStackView()
     private let bookmarkButton = UIButton()
+    
+    weak var delegate: BreedCellDelegate?
+    private var breed: BreedUI?
     
     private var isBookmarked = false
     
@@ -28,9 +35,14 @@ final class BreedCell: BaseCollectionCell {
     
  //MARK:  Update from api
     func update(with model: BreedUI) {
+        self.breed = model 
         self.breedLabel.text = model.breed
         self.originLabel.text = model.origin
         imageView.kf.setImage(with: model.url, placeholder: UIImage(named: "default"))
+        
+        // проверяем, есть ли объект в избранном
+        let isFav = FavoritesStorage.shared.fetch().contains(where: { $0.id == model.id })
+        updateBookmarkState(isFav)
     }
     
     override var isHighlighted: Bool {
@@ -106,15 +118,12 @@ private extension BreedCell {
         isBookmarked.toggle()
         bookmarkButton.isSelected = isBookmarked
         
-//         Можно добавить дополнительную анимацию
         if isBookmarked {
             animateBookmarkSelection()
         }
         
-        // Уведомляем делегата или используем closure для передачи события
-//         delegate?.didTapBookmark(in: self)
-        // или
-//         onBookmarkTapped?(isBookmarked)
+        guard let breed = breed else { return }
+        delegate?.didTapBookmark(for: breed, isBookmarked: isBookmarked)
     }
     
     private func animateBookmarkSelection() {
