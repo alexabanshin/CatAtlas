@@ -9,8 +9,7 @@ import UIKit
 
 protocol MainViewPresenterProtocol {
     var numberOfCell: Int { get }
-    func getBreedAt(_ indexPath: IndexPath) -> BreedUI
-    
+    var breeds: [BreedUI] { get }
 }
 
 protocol MainViewProtocol: AnyObject {
@@ -21,8 +20,10 @@ protocol MainViewProtocol: AnyObject {
 final class MainViewPresenter: MainViewPresenterProtocol {
     private let networkService: NetworkServiceProtocol
     weak var view: MainViewProtocol?
-    
-    private var breeds: [BreedUI] = []
+    var breeds: [BreedUI] = []
+    var numberOfCell: Int {
+        return breeds.count
+    }
     
     init(networkService: NetworkServiceProtocol) {
         self.networkService = networkService
@@ -51,7 +52,5 @@ final class MainViewPresenter: MainViewPresenterProtocol {
     }
     
     
-    var numberOfCell: Int {
-        return breeds.count
-    }
+    
 }
