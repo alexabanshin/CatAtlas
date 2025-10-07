@@ -7,25 +7,54 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+protocol DetailViewProtocol: AnyObject {
+    func update(with model: DetailUI)
+}
 
+final class DetailViewController: UIViewController, DetailViewProtocol {
+    private let presenter: DetailPresenter
+    private let detailScrollView = DetailScrollView()
+
+    init(presenter: DetailPresenter) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) { fatalError() }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = "Detail"
-        view.backgroundColor = .white
-        // Do any additional setup after loading the view.
+        configureViews()
+        configureConstraints()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func update(with model: DetailUI) {
+        detailScrollView.update(with: model)
     }
-    */
+}
 
+private extension DetailViewController {
+    func configureViews() {
+        configureScrollView()
+        
+        detailScrollView.onButtonTapped = {
+            print("taped")
+        }
+    }
+    
+    func configureScrollView() {
+        view.addView(detailScrollView)
+        detailScrollView.contentInsetAdjustmentBehavior = .never // Что бы imageView был без отступов от safe area
+    }
+    
+    
+    func configureConstraints() {
+        NSLayoutConstraint.activate([
+            detailScrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            detailScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            detailScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            detailScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+    
 }
