@@ -18,7 +18,7 @@ final class BreedCell: BaseCollectionCell {
     private let originLabel = UILabel()
     private let breedLabel = UILabel()
     private let labelsStack = UIStackView()
-    private let bookmarkButton = UIButton()
+    private let bookmarkButton = BookmarkButton()
     
     weak var delegate: BreedCellDelegate?
     private var breed: BreedUI?
@@ -89,21 +89,10 @@ private extension BreedCell {
     }
   
     func setupBookmarkButton() {
-        bookmarkButton.translatesAutoresizingMaskIntoConstraints = false
-        
         bookmarkButton.setImage(UIImage(named: "bookmark"), for: .normal)
         bookmarkButton.setImage(UIImage(named: "paw2"), for: .selected)
-        
-        bookmarkButton.backgroundColor = .white.withAlphaComponent(0.9)
-        bookmarkButton.layer.cornerRadius = 12.5
-        bookmarkButton.layer.shadowColor = UIColor.black.cgColor
-        bookmarkButton.layer.shadowOffset = CGSize(width: 0, height: 2)
-        bookmarkButton.layer.shadowRadius = 4
-        bookmarkButton.layer.shadowOpacity = 0.3
-        
         bookmarkButton.addTarget(self, action: #selector(didTapBookmarkButton), for: .touchUpInside)
-        
-        contentView.addSubview(bookmarkButton)
+        contentView.addView(bookmarkButton)
     }
     
     @objc func didTapBookmarkButton() {
