@@ -62,6 +62,26 @@ struct BreedUI {
     }
 }
 
+///MainScreen UI model
+struct DetailUI {
+    let id: String
+    let breed: String
+    let temperament: String
+    let url: URL?
+    
+    init(from dto: BreedDTO) {
+        self.id = dto.id
+        self .breed = dto.name
+        self.temperament = dto.temperament
+        
+        if let urlString = dto.image?.url, let url = URL(string: urlString) {
+            self.url = url
+        } else {
+            self.url = nil
+        }
+    }
+}
+
 extension BreedUI {
     init(from favorite: FavoriteBreed) {
         self.id = favorite.id ?? UUID().uuidString  
